@@ -1,0 +1,5 @@
+Q:\c projects\C# projects\AnalyzerLib\AnalyzerLib\bin\Debug\AnalyzerLib.dll
+Q:\c projects\C# projects\AnalyzerLib\AnalyzerLib\bin\Debug\AnalyzerLib.pdb
+Q:\c projects\C# projects\AnalyzerLib\AnalyzerLib\obj\Debug\AnalyzerLib.csprojResolveAssemblyReference.cache
+Q:\c projects\C# projects\AnalyzerLib\AnalyzerLib\obj\Debug\AnalyzerLib.dll
+Q:\c projects\C# projects\AnalyzerLib\AnalyzerLib\obj\Debug\AnalyzerLib.pdb
