@@ -1,0 +1,11 @@
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\bin\Debug\McGinn-Joseph-Analyzers.exe.config
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\bin\Debug\McGinn-Joseph-Analyzers.exe
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\bin\Debug\McGinn-Joseph-Analyzers.pdb
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\bin\Debug\AnalyzerLib.dll
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\bin\Debug\AnalyzerLib.pdb
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\obj\Debug\McGinn-Joseph-Analyzers.csprojResolveAssemblyReference.cache
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\obj\Debug\McGinn_Joseph_Analyzers.GameForm.resources
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\obj\Debug\McGinn_Joseph_Analyzers.Properties.Resources.resources
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\obj\Debug\McGinn-Joseph-Analyzers.csproj.GenerateResource.Cache
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\obj\Debug\McGinn-Joseph-Analyzers.exe
+Q:\c projects\C# projects\McGinn-Joseph-Analyzers\McGinn-Joseph-Analyzers\obj\Debug\McGinn-Joseph-Analyzers.pdb
