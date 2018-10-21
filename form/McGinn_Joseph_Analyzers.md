@@ -222,7 +222,8 @@ namespace McGinn_Joseph_Analyzers
                     for (int j = 0; j < evidence.GetLength(1); j++)
                     {
                         evidence[i, j] = new PictureBox();
-                        evidence[i, j].Location = new Point(j * 50 + 1, i * 50 + 1);//setting x and y points
+                        evidence[i, j].Location = new Point(j * 50 + 1, i * 50 + 1);//setting x
+                                                                                    //and y points
                         evidence[i, j].Size = new Size(50, 50);
                         evidence[i, j].BorderStyle = BorderStyle.FixedSingle;
                         evidence[i, j].Image = images[i, j];
