@@ -92,19 +92,7 @@ namespace AnalyzerLib
                 return false;
         }
 
-        //this was used for debug and no longer has any purpose. delete before
-        //turning in the project
-        public string getSampleLocations()
-        {
-            string s = "";
-
-            foreach (Point p in _samples)
-            {
-                s = s + " (" + p.X + "," + p.Y + ") ";
-            }
-
-            return s;
-        }
+        
 
     }
 }
