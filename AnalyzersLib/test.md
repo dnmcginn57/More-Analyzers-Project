@@ -8,29 +8,21 @@ using System.Drawing;
 
 namespace AnalyzerLib
 {
-    public class DNAanalyzer : Analyzer
+    public class PrintAnalyzer : Analyzer
     {
-        protected Image[,] _grid;
+        private char[,] _grid;
 
-        public DNAanalyzer(int rows, int cols, int guesses, int samples) :
+        public PrintAnalyzer(int rows, int cols, int guesses, int samples) :
             base(rows, cols, guesses, samples)
         {
-
-            _grid = new Image[rows, cols];
-            Image leftArrow = Image.FromFile(@"leftarrow.jpg");
-            Image rightArrow = Image.FromFile(@"rightarrow.jpg");
-            Image upArrow = Image.FromFile(@"uparrow.jpg");
-            Image downArrow = Image.FromFile(@"downarrow.jpg");
-            Image blood = Image.FromFile(@"blood.jpg");
-            Image hair = Image.FromFile(@"hair.jpg");
-            Image dna = Image.FromFile(@"dna.jpg");
-            Image horLine = Image.FromFile(@"horiline.png");
-            Image vertLine = Image.FromFile(@"vertline.png");
+            _grid = new char[rows, cols];
             PopulateArray();
-
         }
 
-        //TODO: public override bool EvaluateGuess()
+        //public override bool EvaluateGuess()
+        //  Accepts an x and y coordinate and a bool to 
+        //      determine which direction to guide the user
+        //  returns true if guess is correct; false otherwise 
         public override bool EvaluateGuess(int x, int y, bool UDLR)
         {
 
@@ -46,7 +38,7 @@ namespace AnalyzerLib
                 if (Array.Exists(_samples, e => e.Equals(p)))
                 {
                     index = Array.IndexOf(_samples, p);
-                    _grid[_samples[index].Y, _samples[index].X] = Image.FromFile("dna.jpg");
+                    _grid[_samples[index].Y, _samples[index].X] = '@';
                     _found++;
                     _samples[index].X = -1;
                     _curGuesses++;
@@ -67,15 +59,15 @@ namespace AnalyzerLib
                     {
                         if (y > _samples[i].Y)
                         {
-                            _grid[y, x] = Image.FromFile("uparrow.jpg");
+                            _grid[y, x] = '^';
                         }
                         else if (y < _samples[i].Y)
                         {
-                            _grid[y, x] = Image.FromFile("downarrow.jpg");
+                            _grid[y, x] = 'V';
                         }
                         else if (y == _samples[i].Y)
                         {
-                            _grid[y, x] = Image.FromFile("horiline.png"); // if guess is in same row
+                            _grid[y, x] = '-'; // if guess is in same row
                         }
                     }
                     //guide horizontal if UDLR == false
@@ -83,38 +75,50 @@ namespace AnalyzerLib
                     {
                         if (x > _samples[i].X)
                         {
-                            _grid[y, x] = Image.FromFile("rightarrow.jpg");
+                            _grid[y, x] = '<';
                         }
                         else if (x < _samples[i].X)
                         {
-                            _grid[y, x] = Image.FromFile("leftarrow.jpg");
+                            _grid[y, x] = '>';
                         }
                         else if (x == _samples[i].X)
                         {
-                            _grid[y, x] = Image.FromFile("vertline.png"); // if guess is in same column
+                            _grid[y, x] = '|'; // if guess is in same column
                         }
                     }
                     _curGuesses++;
                     return false;
                 }
             }
+
         }
 
-        //public overide Image[,] DisplayGrid()
-        public override Image[,] DisplayGrid()
-        {
-            Image[,] arr = _grid.Clone() as Image[,];
-
-            return _grid;
-        }
-
-        //public override string PrintGrid()
-        //  not used for image grid objects
+        //Tpublic overide string PrintGrid()
         public override string PrintGrid()
         {
-            return "this is a grid of images";
+            string gridString = "";
+            
+
+            for (int r = 0; r < _rows; r++)
+            {
+                gridString += "";
+                for (int c = 0; c < _cols; c++)
+                {
+                    gridString += " ";
+                    gridString += _grid[r, c].ToString();
+                    gridString += " ";
+                }
+                gridString += Environment.NewLine;
+                gridString += Environment.NewLine;
+            }
+
+            return gridString;
         }
 
+        public override Image[,] DisplayGrid()
+        {
+            throw new NotImplementedException();
+        }
 
         //private void PopulateArray
         private void PopulateArray()
@@ -123,12 +127,14 @@ namespace AnalyzerLib
             {
                 for (int c = 0; c < _cols; c++)
                 {
-                    _grid[r, c] = Image.FromFile("pwright.jpg");
+                    _grid[r, c] = '~';
                 }
             }
         }
 
+
     }
+
 }
 
 ```
