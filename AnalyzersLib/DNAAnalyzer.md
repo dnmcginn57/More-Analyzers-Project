@@ -12,7 +12,8 @@ namespace AnalyzerLib
     {
         protected Image[,] _grid;
 
-        public DNAanalyzer(int rows, int cols, int guesses, int samples) : base(rows, cols, guesses, samples)
+        public DNAanalyzer(int rows, int cols, int guesses, int samples) :
+                base(rows, cols, guesses, samples)
         {
 
             _grid = new Image[rows, cols];
